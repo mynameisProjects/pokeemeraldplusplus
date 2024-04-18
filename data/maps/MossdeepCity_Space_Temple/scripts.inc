@@ -1,0 +1,81 @@
+MossdeepCity_Space_Temple_MapScripts::
+	.byte 0
+
+MossdeepCity_Space_Temple_EventScript_CheckIfPalkiaDefeated::
+	goto_if_set FLAG_HIDE_PALKIA, MossdeepCity_Space_Temple_EventScript_CheckIfDialgaDefeated
+	end
+
+MossdeepCity_Space_Temple_EventScript_CheckIfDialgaDefeated::
+	goto_if_set FLAG_HIDE_DIALGA, MossdeepCity_Space_Temple_EventScript_CheckIfGiritinaDefeated
+	end
+
+MossdeepCity_Space_Temple_EventScript_CheckIfGiritinaDefeated::
+	goto_if_set FLAG_HIDE_GIRITINA, MossdeepCity_Space_Temple_EventScript_AllCaught
+	end
+
+MossdeepCity_Space_Temple_EventScript_AllCaught::
+	setflag FLAG_SPACE_TRIO_DEFEATED
+	end
+
+MossdeepCity_Space_Temple_EventScript_PalkiaBattle::
+	lockall
+	playmoncry SPECIES_PALKIA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_PALKIA, 60, ITEM_CHOICE_BAND
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, MossdeepCity_Space_Temple_EventScript_PostPalkiaBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_Space_Temple_EventScript_PostPalkiaBattle
+	releaseall
+	end
+
+MossdeepCity_Space_Temple_EventScript_PostPalkiaBattle::
+	fadescreen FADE_TO_BLACK
+	removeobject 1
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_PALKIA
+	goto MossdeepCity_Space_Temple_EventScript_CheckIfPalkiaDefeated
+	end
+
+MossdeepCity_Space_Temple_EventScript_DialgaBattle::
+	lockall
+	playmoncry SPECIES_DIALGA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_DIALGA, 60, ITEM_CHOICE_SPECS
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, MossdeepCity_Space_Temple_EventScript_PostDialgaBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_Space_Temple_EventScript_PostDialgaBattle
+	releaseall
+	end
+
+MossdeepCity_Space_Temple_EventScript_PostDialgaBattle::
+	fadescreen FADE_TO_BLACK
+	removeobject 2
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_DIALGA
+	goto MossdeepCity_Space_Temple_EventScript_CheckIfPalkiaDefeated
+	end
+
+MossdeepCity_Space_Temple_EventScript_GiritinaBattle::
+	lockall
+	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_GIRATINA, 80, ITEM_CHOICE_SCARF
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, MossdeepCity_Space_Temple_EventScript_PostGiritinaBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_Space_Temple_EventScript_PostGiritinaBattle
+	releaseall
+	end
+
+MossdeepCity_Space_Temple_EventScript_PostGiritinaBattle::
+	fadescreen FADE_TO_BLACK
+	removeobject 3
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_GIRITINA
+	goto MossdeepCity_Space_Temple_EventScript_CheckIfPalkiaDefeated
+	end

@@ -1,0 +1,86 @@
+{
+  "id": "MAP_MOSSDEEP_CITY_SPACE_TEMPLE",
+  "name": "MossdeepCity_Space_Temple",
+  "layout": "LAYOUT_MOSSDEEP_CITY_SPACE_TEMPLE",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_SPACE_TEMPLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PALKIA",
+      "x": 7,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_Space_Temple_EventScript_PalkiaBattle",
+      "flag": "FLAG_HIDE_PALKIA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_DIALGA",
+      "x": 25,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_Space_Temple_EventScript_DialgaBattle",
+      "flag": "FLAG_HIDE_DIALGA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GIRATINA_NORMAL",
+      "x": 16,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_Space_Temple_EventScript_GiritinaBattle",
+      "flag": "FLAG_HIDE_GIRITINA"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 15,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 17,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

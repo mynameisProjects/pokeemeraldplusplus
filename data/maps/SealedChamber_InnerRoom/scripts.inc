@@ -1,0 +1,123 @@
+SealedChamber_InnerRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SealedChamber_OnTransition
+	.byte 0
+
+SealedChamber_OnTransition:
+	goto_if_set FLAG_DEFEATED_REGICE SealedChamber_InnerRoom_EventScript_CheckRegirock
+	end
+
+SealedChamber_InnerRoom_EventScript_CheckRegirock::
+	goto_if_set FLAG_DEFEATED_REGIROCK SealedChamber_InnerRoom_EventScript_CheckRegisteel
+	end
+
+SealedChamber_InnerRoom_EventScript_CheckRegisteel::
+	goto_if_set FLAG_DEFEATED_REGISTEEL SealedChamber_InnerRoom_EventScript_CheckRegigigas
+	end
+
+SealedChamber_InnerRoom_EventScript_CheckRegigigas::
+	goto_if_set FLAG_DEFEATED_REGIGIGAS SealedChamber_InnerRoom_EventScript_RegigigasInvisible
+	goto_if_unset FLAG_DEFEATED_REGIGIGAS SealedChamber_InnerRoom_EventScript_RegigigasVisible
+	end
+
+SealedChamber_InnerRoom_EventScript_RegigigasVisible::
+	clearflag FLAG_HIDE_REGIGIGAS
+	end
+
+SealedChamber_InnerRoom_EventScript_RegigigasInvisible::
+	setflag FLAG_HIDE_REGIGIGAS
+	end
+
+SealedChamber_InnerRoom_EventScript_RegigigasFight::
+	lockall
+	playmoncry SPECIES_REGIGIGAS, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_REGIGIGAS, 60, ITEM_EARTH_PLATE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, SealedChamber_InnerRoom_EventScript_PostRegigigasBattle
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SealedChamber_InnerRoom_EventScript_PostRegigigasBattle
+	releaseall
+	end
+	
+SealedChamber_InnerRoom_EventScript_PostRegigigasBattle::
+	fadescreen FADE_TO_BLACK
+	removeobject 1
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_HIDE_REGIGIGAS
+	setflag FLAG_DEFEATED_REGIGIGAS
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleBackWall::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_FirstWailordLastRelicanth
+	goto_if_set FLAG_REGI_DOORS_OPENED, SealedChamber_InnerRoom_EventScript_NoEffect
+	specialvar VAR_RESULT, CheckRelicanthWailord
+	goto_if_eq VAR_RESULT, FALSE, SealedChamber_InnerRoom_EventScript_NoEffect
+	fadeoutbgm 0
+	playse SE_TRUCK_MOVE
+	special DoSealedChamberShakingEffect_Long
+	waitstate
+	delay 40
+	special DoSealedChamberShakingEffect_Short
+	waitstate
+	playse SE_DOOR
+	delay 40
+	special DoSealedChamberShakingEffect_Short
+	waitstate
+	playse SE_DOOR
+	delay 40
+	special DoSealedChamberShakingEffect_Short
+	waitstate
+	playse SE_DOOR
+	delay 40
+	msgbox gText_DoorOpenedFarAway, MSGBOX_DEFAULT
+	closemessage
+	fadeinbgm 0
+	setflag FLAG_REGI_DOORS_OPENED
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_NoEffect::
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart1::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_InThisCaveWeHaveLived
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart2::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_WeOweAllToThePokemon
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart3::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_ButWeSealedThePokemonAway
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart4::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_WeFearedIt
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart5::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_ThoseWithCourageHope
+	releaseall
+	end
+
+SealedChamber_InnerRoom_EventScript_BrailleStoryPart6::
+	lockall
+	braillemsgbox SealedChamber_InnerRoom_Braille_OpenDoorEternalPokemonWaits
+	releaseall
+	end
+
+SealedChamber_Text_Debug:
+.string "Hit clear flag$"
+

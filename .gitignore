@@ -1,0 +1,180 @@
+*.exe
+*.o
+*.i
+*.elf
+*.gba
+!data/*.gba
+*.sgm
+*.sa1
+*.ss[0-9]
+*.sg1
+*.1bpp
+*.4bpp
+*.8bpp
+*.gbapal
+*.lz
+*.rl
+*.latfont
+*.hwjpnfont
+*.fwjpnfont
+sound/**/*.bin
+sound/songs/midi/*.s
+tools/agbcc
+*.map
+*.ld
+*.bat
+*.dump
+*.sa*
+Thumbs.db
+build/
+.DS_Store
+*.ddump
+.idea/
+porymap.*.cfg
+prefabs.json
+.vscode/
+*.a
+.fuse_hidden*
+.ccls-cache/*
+.ropeproject/
+/overworld/
+/icons/
+*.sna
+*.diff
+*.sym
+*.js
+agbcc/
+/*.zip
+MISC FILES/wondertradestation.png
+MISC FILES/wondertradestation.pal
+MISC FILES/wondertradestation.gal
+MISC FILES/wild_encounters2.json
+MISC FILES/wild_encounters1.json
+MISC FILES/wild_encounters.json.txt
+MISC FILES/Watermons.txt
+MISC FILES/Unsuedmonsposts.txt
+MISC FILES/Unformatted Tagged Pokemon.txt
+MISC FILES/trainer_parties.h
+MISC FILES/Tier List.png
+MISC FILES/Rocksmashmons.txt
+MISC FILES/portalwip.gal
+MISC FILES/portalspace.png
+MISC FILES/portalspace.pal
+MISC FILES/Legendary Customs/zygarde.png
+MISC FILES/Legendary Customs/zygarde.pal
+MISC FILES/Legendary Customs/zeraora.png
+MISC FILES/Legendary Customs/zeraora.pal
+MISC FILES/Legendary Customs/zekrom.png
+MISC FILES/Legendary Customs/zekrom.pal
+MISC FILES/Legendary Customs/zapdos.png
+MISC FILES/Legendary Customs/zapdos.pal
+MISC FILES/Legendary Customs/zamazenta.png
+MISC FILES/Legendary Customs/zamazenta.pal
+MISC FILES/Legendary Customs/zacian.png
+MISC FILES/Legendary Customs/zacian.pal
+MISC FILES/Legendary Customs/yveltal.png
+MISC FILES/Legendary Customs/yveltal.pal
+MISC FILES/Legendary Customs/xurkitree.png
+MISC FILES/Legendary Customs/xurkitree.pal
+MISC FILES/Legendary Customs/xerneas.png
+MISC FILES/Legendary Customs/xerneas.pal
+MISC FILES/Legendary Customs/volcanion.png
+MISC FILES/Legendary Customs/volcanion.pal
+MISC FILES/Legendary Customs/typenull.png
+MISC FILES/Legendary Customs/typenull.pal
+MISC FILES/Legendary Customs/tapulele.png
+MISC FILES/Legendary Customs/tapulele.pal
+MISC FILES/Legendary Customs/tapukoko.png
+MISC FILES/Legendary Customs/tapukoko.pal
+MISC FILES/Legendary Customs/tapufini.png
+MISC FILES/Legendary Customs/tapufini.pal
+MISC FILES/Legendary Customs/tapubulu.png
+MISC FILES/Legendary Customs/tapubulu.pal
+MISC FILES/Legendary Customs/staktaka.png
+MISC FILES/Legendary Customs/staktaka.pal
+MISC FILES/Legendary Customs/shaymin.png
+MISC FILES/Legendary Customs/shaymin.pal
+MISC FILES/Legendary Customs/reshiram.png
+MISC FILES/Legendary Customs/reshiram.pal
+MISC FILES/Legendary Customs/regigigas.png
+MISC FILES/Legendary Customs/regigigas.pal
+MISC FILES/Legendary Customs/regieleki.png
+MISC FILES/Legendary Customs/regieleki.pal
+MISC FILES/Legendary Customs/regidrago.png
+MISC FILES/Legendary Customs/regidrago.pal
+MISC FILES/Legendary Customs/poipole.png
+MISC FILES/Legendary Customs/poipole.pal
+MISC FILES/Legendary Customs/phione.png
+MISC FILES/Legendary Customs/phione.pal
+MISC FILES/Legendary Customs/pheromosa.png
+MISC FILES/Legendary Customs/pheromosa.pal
+MISC FILES/Legendary Customs/palkia.png
+MISC FILES/Legendary Customs/palkia.pal
+MISC FILES/Legendary Customs/nihilego.png
+MISC FILES/Legendary Customs/nihilego.pal
+MISC FILES/Legendary Customs/necrozma.png
+MISC FILES/Legendary Customs/necrozma.pal
+MISC FILES/Legendary Customs/moltres.png
+MISC FILES/Legendary Customs/moltres.pal
+MISC FILES/Legendary Customs/mewtwo.png
+MISC FILES/Legendary Customs/mewtwo.pal
+MISC FILES/Legendary Customs/meltan.png
+MISC FILES/Legendary Customs/meltan.pal
+MISC FILES/Legendary Customs/meloetta.png
+MISC FILES/Legendary Customs/meloetta.pal
+MISC FILES/Legendary Customs/marshadow.png
+MISC FILES/Legendary Customs/marshadow.pal
+MISC FILES/Legendary Customs/manphy.png
+MISC FILES/Legendary Customs/manphy.pal
+MISC FILES/Legendary Customs/magearna.png
+MISC FILES/Legendary Customs/magearna.pal
+MISC FILES/Legendary Customs/kyruem.png
+MISC FILES/Legendary Customs/kyruem.pal
+MISC FILES/Legendary Customs/keldeo.png
+MISC FILES/Legendary Customs/keldeo.pal
+MISC FILES/Legendary Customs/kartana.png
+MISC FILES/Legendary Customs/kartana.pal
+MISC FILES/Legendary Customs/jirachi.png
+MISC FILES/Legendary Customs/jirachi.pal
+MISC FILES/Legendary Customs/hoopa.png
+MISC FILES/Legendary Customs/hoopa.pal
+MISC FILES/Legendary Customs/heatran.png
+MISC FILES/Legendary Customs/heatran.pal
+MISC FILES/Legendary Customs/guzzlord.png
+MISC FILES/Legendary Customs/guzzlord.pal
+MISC FILES/Legendary Customs/giratina.png
+MISC FILES/Legendary Customs/giratina.pal
+MISC FILES/Legendary Customs/genesect.png
+MISC FILES/Legendary Customs/genesect.pal
+MISC FILES/Legendary Customs/eternatus.png
+MISC FILES/Legendary Customs/eternatus.pal
+MISC FILES/Legendary Customs/diance.png
+MISC FILES/Legendary Customs/diance.pal
+MISC FILES/Legendary Customs/dialga.png
+MISC FILES/Legendary Customs/dialga.pal
+MISC FILES/Legendary Customs/darkrai.png
+MISC FILES/Legendary Customs/darkrai.pal
+MISC FILES/Legendary Customs/cresselia.png
+MISC FILES/Legendary Customs/cresselia.pal
+MISC FILES/Legendary Customs/celesteela.png
+MISC FILES/Legendary Customs/celesteela.pal
+MISC FILES/Legendary Customs/celebi.png
+MISC FILES/Legendary Customs/celebi.pal
+MISC FILES/Legendary Customs/buzzwole.png
+MISC FILES/Legendary Customs/buzzwole.pal
+MISC FILES/Legendary Customs/blacephalon.png
+MISC FILES/Legendary Customs/blacephalon.pal
+MISC FILES/Legendary Customs/articuno.png
+MISC FILES/Legendary Customs/articuno.pal
+MISC FILES/Legendary Customs/arceus.png
+MISC FILES/Legendary Customs/arceus.pal
+MISC FILES/Landmonds.txt
+MISC FILES/hoopaportal.png
+MISC FILES/hoopaportal.pal
+MISC FILES/hoopaportal.gal
+MISC FILES/Formatted Pokemon Tags.csv
+MISC FILES/Formatted Pokemon Power Rating.csv
+MISC FILES/Formatted Location Tags.csv
+MISC FILES/Fishingmons.txt
+MISC FILES/battle_ai_scripts.s
+MISC FILES/battle_ai_script_commands.c
