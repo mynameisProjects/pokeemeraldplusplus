@@ -330,6 +330,7 @@ RivalsHouse_2F_EventScript_Rival::
 	end
 
 RivalsHouse_2F_EventScript_May::
+	goto_if_unset FLAG_SYS_NATIONAL_DEX, LittlerootTown_MaysHouse_2F_EventScript_Ret
 	goto_if_unset FLAG_CAUGHT_JIRACHI, LittlerootTown_MaysHouse_2F_EventScript_PlayJirachiEventToBattle
 	msgbox RivalsHouse_2F_Text_MayGettingReady, MSGBOX_DEFAULT
 	releaseall
