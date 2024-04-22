@@ -718,7 +718,7 @@
 #define FLAG_PRISONBOTTLE                 0x2A2
 #define FLAG_NSOLAR                       0x2A3
 #define FLAG_NLUNAR                       0x2A4
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
+#define FLAG_MOM_LOAN                     0x2A5
 #define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
 #define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag

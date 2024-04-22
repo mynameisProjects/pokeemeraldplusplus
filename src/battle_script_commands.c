@@ -7309,7 +7309,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         else
             moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * gTrainerMoneyTable[i].value;
     }
-
+    moneyReward = moneyReward * 1.5;
     return moneyReward;
 }
 

@@ -389,6 +389,11 @@ PlayersHouse_1F_Text_RunningShoesManual:
 	.string "“Lace up your RUNNING SHOES and hit\n"
 	.string "the road running!”$"
 
+PlayersHouse_1F_Text_GiveYouSomeMoney:
+	.string "Oh {PLAYER}! Please take this\n"
+	.string "with you on your journey.\p"
+	.string "{PLAYER} received ¥5,000!$"
+
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "DAD: Hm?\p"
 	.string "Hey, it's {PLAYER}!\p"
