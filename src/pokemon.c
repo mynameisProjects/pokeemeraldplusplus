@@ -8399,12 +8399,14 @@ bool32 TryFormChange(u32 monId, u32 side, u16 method)
 {
     struct Pokemon *party = (side == B_SIDE_PLAYER) ? gPlayerParty : gEnemyParty;
     u16 targetSpecies;
+    u32 previouslyHeldItem;
 
     if (GetMonData(&party[monId], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_NONE
      || GetMonData(&party[monId], MON_DATA_SPECIES_OR_EGG, 0) == SPECIES_EGG)
         return FALSE;
 
     targetSpecies = GetFormChangeTargetSpecies(&party[monId], method, 0);
+    previouslyHeldItem = GetMonData(&party[monId], MON_DATA_HELD_ITEM, NULL);
 
     if (targetSpecies == SPECIES_NONE && gBattleStruct != NULL)
         targetSpecies = gBattleStruct->changedSpecies[side][monId];
@@ -8413,6 +8415,7 @@ bool32 TryFormChange(u32 monId, u32 side, u16 method)
     {
         TryToSetBattleFormChangeMoves(&party[monId], method);
         SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
+        SetMonData(&party[monId], MON_DATA_HELD_ITEM, &previouslyHeldItem);
         CalculateMonStats(&party[monId]);
         return TRUE;
     }

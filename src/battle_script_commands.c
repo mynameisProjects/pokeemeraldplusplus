@@ -8433,6 +8433,7 @@ static void HandleScriptMegaPrimalBurst(u32 caseId, u32 battler, u32 type)
         if (type == HANDLE_TYPE_ULTRA_BURST)
             gBattleStruct->burst.alreadyBursted[position] = TRUE;
     }
+    SetMonData(mon, MON_DATA_HELD_ITEM, &gBattleStruct->previouslyHeldItem);
 }
 
 // Return True if the order was changed, and false if the order was not changed(for example because the target would move after the attacker anyway).

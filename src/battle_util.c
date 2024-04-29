@@ -10495,6 +10495,7 @@ bool32 TryBattleFormChange(u32 battler, u16 method)
             gBattleStruct->changedSpecies[side][monId] = gBattleMons[battler].species;
 
         TryToSetBattleFormChangeMoves(&party[monId], method);
+        gBattleStruct->previouslyHeldItem = GetMonData(&party[monId], MON_DATA_HELD_ITEM, NULL);
         SetMonData(&party[monId], MON_DATA_SPECIES, &targetSpecies);
         gBattleMons[battler].species = targetSpecies;
         RecalcBattlerStats(battler, &party[monId]);
@@ -10518,10 +10519,11 @@ bool32 TryBattleFormChange(u32 battler, u16 method)
             TryToSetBattleFormChangeMoves(&party[monId], method);
             SetMonData(&party[monId], MON_DATA_SPECIES, &gBattleStruct->changedSpecies[side][monId]);
             RecalcBattlerStats(battler, &party[monId]);
+            SetMonData(&party[monId], MON_DATA_HELD_ITEM, &gBattleStruct->previouslyHeldItem);
             return TRUE;
         }
     }
-
+    SetMonData(&party[monId], MON_DATA_HELD_ITEM, &gBattleStruct->previouslyHeldItem);
     return FALSE;
 }
 
