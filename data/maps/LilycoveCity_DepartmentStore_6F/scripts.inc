@@ -19,8 +19,14 @@ LilycoveCity_DepartmentStore_6F_Pokemart1:
 	.2byte ITEM_GENIUS_FEATHER
 	.2byte ITEM_CLEVER_FEATHER
 	.2byte ITEM_SWIFT_FEATHER
-	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
+	.2byte ITEM_HEALTH_BOTTLE_CAP
+	.2byte ITEM_MUSCLE_BOTTLE_CAP
+	.2byte ITEM_RESIST_BOTTLE_CAP
+	.2byte ITEM_GENIUS_BOTTLE_CAP
+	.2byte ITEM_CLEVER_BOTTLE_CAP
+	.2byte ITEM_SWIFT_BOTTLE_CAP
+	.2byte ITEM_GOLD_BOTTLE_CAP
 	.2byte ITEM_NONE
 	release
 	end
@@ -174,6 +180,43 @@ LilycoveCity_DepartmentStore_6F_Pokemart4:
 	.2byte ITEM_ALORAICHIUM_Z
 	.2byte ITEM_PIKASHUNIUM_Z
 	.2byte ITEM_ULTRANECROZIUM_Z
+	.2byte ITEM_NONE
+	release
+	end
+
+LilycoveCity_DepartmentStore_6F_EventScript_ClerkMint::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LilycoveCity_DepartmentStore_6F_Pokemart5
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LilycoveCity_DepartmentStore_6F_Pokemart5:
+	.2byte ITEM_LONELY_MINT
+	.2byte ITEM_ADAMANT_MINT
+	.2byte ITEM_NAUGHTY_MINT
+	.2byte ITEM_BRAVE_MINT
+	.2byte ITEM_BOLD_MINT
+	.2byte ITEM_IMPISH_MINT
+	.2byte ITEM_LAX_MINT
+	.2byte ITEM_RELAXED_MINT
+	.2byte ITEM_MODEST_MINT
+	.2byte ITEM_MILD_MINT
+	.2byte ITEM_RASH_MINT
+	.2byte ITEM_QUIET_MINT
+	.2byte ITEM_CALM_MINT
+	.2byte ITEM_GENTLE_MINT
+	.2byte ITEM_CAREFUL_MINT
+	.2byte ITEM_SASSY_MINT
+	.2byte ITEM_TIMID_MINT
+	.2byte ITEM_HASTY_MINT
+	.2byte ITEM_JOLLY_MINT
+	.2byte ITEM_NAIVE_MINT
+	.2byte ITEM_SERIOUS_MINT
 	.2byte ITEM_NONE
 	release
 	end

@@ -981,7 +981,7 @@ const struct Item gItems[] =
     [ITEM_LONELY_MINT] =
     {
         .name = _("Lonely Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sLonelyMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -993,7 +993,7 @@ const struct Item gItems[] =
     [ITEM_ADAMANT_MINT] =
     {
         .name = _("Adamant Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sAdamantMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1005,7 +1005,7 @@ const struct Item gItems[] =
     [ITEM_NAUGHTY_MINT] =
     {
         .name = _("Naughty Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sNaughtyMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1017,7 +1017,7 @@ const struct Item gItems[] =
     [ITEM_BRAVE_MINT] =
     {
         .name = _("Brave Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sBraveMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1029,7 +1029,7 @@ const struct Item gItems[] =
     [ITEM_BOLD_MINT] =
     {
         .name = _("Bold Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sBoldMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1041,7 +1041,7 @@ const struct Item gItems[] =
     [ITEM_IMPISH_MINT] =
     {
         .name = _("Impish Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sImpishMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1053,7 +1053,7 @@ const struct Item gItems[] =
     [ITEM_LAX_MINT] =
     {
         .name = _("Lax Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sLaxMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1065,7 +1065,7 @@ const struct Item gItems[] =
     [ITEM_RELAXED_MINT] =
     {
         .name = _("Relaxed Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sRelaxedMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1077,7 +1077,7 @@ const struct Item gItems[] =
     [ITEM_MODEST_MINT] =
     {
         .name = _("Modest Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sModestMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1089,7 +1089,7 @@ const struct Item gItems[] =
     [ITEM_MILD_MINT] =
     {
         .name = _("Mild Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sMildMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1101,7 +1101,7 @@ const struct Item gItems[] =
     [ITEM_RASH_MINT] =
     {
         .name = _("Rash Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sRashMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1113,7 +1113,7 @@ const struct Item gItems[] =
     [ITEM_QUIET_MINT] =
     {
         .name = _("Quiet Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sQuietMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1125,7 +1125,7 @@ const struct Item gItems[] =
     [ITEM_CALM_MINT] =
     {
         .name = _("Calm Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sCalmMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1137,7 +1137,7 @@ const struct Item gItems[] =
     [ITEM_GENTLE_MINT] =
     {
         .name = _("Gentle Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sGentleMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1149,7 +1149,7 @@ const struct Item gItems[] =
     [ITEM_CAREFUL_MINT] =
     {
         .name = _("Careful Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sCarefulMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1161,7 +1161,7 @@ const struct Item gItems[] =
     [ITEM_SASSY_MINT] =
     {
         .name = _("Sassy Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sSassyMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1173,7 +1173,7 @@ const struct Item gItems[] =
     [ITEM_TIMID_MINT] =
     {
         .name = _("Timid Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sTimidMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1185,7 +1185,7 @@ const struct Item gItems[] =
     [ITEM_HASTY_MINT] =
     {
         .name = _("Hasty Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sHastyMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1197,7 +1197,7 @@ const struct Item gItems[] =
     [ITEM_JOLLY_MINT] =
     {
         .name = _("Jolly Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sJollyMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1209,7 +1209,7 @@ const struct Item gItems[] =
     [ITEM_NAIVE_MINT] =
     {
         .name = _("Naive Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sNaiveMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1221,7 +1221,7 @@ const struct Item gItems[] =
     [ITEM_SERIOUS_MINT] =
     {
         .name = _("Serious Mint"),
-        .price = 20000,
+        .price = 5000,
         .description = sSeriousMintDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -1630,25 +1630,27 @@ const struct Item gItems[] =
 
 // Treasures
 
-    [ITEM_BOTTLE_CAP] =
+    [ITEM_HEALTH_BOTTLE_CAP] =
     {
-        .name = _("Bottle Cap"),
-        .price = 5000,
-        .description = sBottleCapDesc,
+        .name = _("Health Cap"),
+        .price = 7500,
+        .description = sHBottleCapDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 1,
         .flingPower = 30,
     },
 
     [ITEM_GOLD_BOTTLE_CAP] =
     {
         .name = _("GoldBottlCap"),
-        .price = 10000,
+        .price = 40000,
         .description = sGoldBottleCapDesc,
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 0,
         .flingPower = 30,
     },
 
@@ -9756,5 +9758,65 @@ const struct Item gItems[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+    },
+    
+    [ITEM_MUSCLE_BOTTLE_CAP] =
+    {
+        .name = _("Muscle Cap"),
+        .price = 7500,
+        .description = sMBottleCapDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 2,
+        .flingPower = 30,
+    },
+
+    [ITEM_RESIST_BOTTLE_CAP] =
+    {
+        .name = _("Resist Cap"),
+        .price = 7500,
+        .description = sRBottleCapDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 3,
+        .flingPower = 30,
+    },
+
+    [ITEM_GENIUS_BOTTLE_CAP] =
+    {
+        .name = _("Genius Cap"),
+        .price = 7500,
+        .description = sGBottleCapDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 4,
+        .flingPower = 30,
+    },
+
+    [ITEM_CLEVER_BOTTLE_CAP] =
+    {
+        .name = _("Clever Cap"),
+        .price = 7500,
+        .description = sCBottleCapDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 5,
+        .flingPower = 30,
+    },
+
+    [ITEM_SWIFT_BOTTLE_CAP] =
+    {
+        .name = _("Swift Cap"),
+        .price = 7500,
+        .description = sSBottleCapDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_BottleCap,
+        .secondaryId = 6,
+        .flingPower = 30,
     },
 };

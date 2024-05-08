@@ -731,15 +731,15 @@ static const u8 sMaxMushroomsDesc[] = _(
     "by one stage.");
 
 // Treasures
-static const u8 sBottleCapDesc[] = _(
-    "A beautiful bottle\n"
-    "cap that gives off\n"
-    "a silver gleam.");
+static const u8 sHBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's health.");
 
 static const u8 sGoldBottleCapDesc[] = _(
-    "A beautiful bottle\n"
-    "cap that gives off\n"
-    "a golden gleam.");
+    "A bottle cap that\n"
+    "can increase all of\n"
+    "a Pokémon's stats.");
 
 static const u8 sNuggetDesc[] = _(
     "A nugget of pure\n"
@@ -3959,3 +3959,28 @@ static const u8 sFormChangerDesc[] = _(
 	"A special item\n"
     "that can change the\n"
     "form of a Pokémon.");
+
+static const u8 sMBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's strength.");
+
+static const u8 sRBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's defense.");
+
+static const u8 sGBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's Sp. Atk.");
+
+static const u8 sCBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's Sp. Def.");
+
+static const u8 sSBottleCapDesc[] = _(
+    "A bottle cap that\n"
+    "can increase your\n"
+    "Pokémon's speed.");

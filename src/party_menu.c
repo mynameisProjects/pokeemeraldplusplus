@@ -4827,10 +4827,113 @@ void ItemUseCB_Mint(u8 taskId, TaskFunc task)
     gTasks[taskId].func = Task_Mint;
 }
 
-#undef tState
-#undef tMonId
 #undef tOldNature
 #undef tNewNature
+
+void Task_BottleCap(u8 taskId)
+{
+    static const u8 askText[] = _("Increase {STR_VAR_1}'s stats?");
+    static const u8 doneText[] = _("{STR_VAR_1}'s stats have increased!{PAUSE_UNTIL_PRESS}");
+    s16 *data = gTasks[taskId].data;
+    u32 newIV = 31;
+
+    switch (tState)
+    {
+    case 0:
+        gPartyMenuUseExitCallback = TRUE;
+        GetMonNickname(&gPlayerParty[tMonId], gStringVar1);
+        CopyItemName(gSpecialVar_ItemId, gStringVar2);
+        StringExpandPlaceholders(gStringVar4, askText);
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 1:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+            PartyMenuDisplayYesNoMenu();
+            tState++;
+        }
+        break;
+    case 2:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case 0:
+            tState++;
+            break;
+        case 1:
+        case MENU_B_PRESSED:
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            ScheduleBgCopyTilemapToVram(2);
+            // Don't exit party selections screen, return to choosing a mon.
+            ClearStdWindowAndFrameToTransparent(6, 0);
+            ClearWindowTilemap(6);
+            DisplayPartyMenuStdMessage(5);
+            gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tOldFunc);
+            return;
+        }
+        break;
+    case 3:
+        PlaySE(SE_USE_ITEM);
+        StringExpandPlaceholders(gStringVar4, doneText);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 4:
+        if (!IsPartyMenuTextPrinterActive())
+            tState++;
+        break;
+    case 5:
+        switch (ItemId_GetSecondaryId(gSpecialVar_ItemId)) {
+            case 0: // gold bottle cap - all
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_HP_IV, &newIV);
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_ATK_IV, &newIV);
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_DEF_IV, &newIV);
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPATK_IV, &newIV);
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPDEF_IV, &newIV);
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPEED_IV, &newIV);
+                break;
+            case 1: // hp cap
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_HP_IV, &newIV);
+                break;
+            case 2: // atk
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_ATK_IV, &newIV);
+                break;
+            case 3: // def
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_DEF_IV, &newIV);
+                break;
+            case 4: // spatk
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPATK_IV, &newIV);
+                break;
+            case 5: // spdef
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPDEF_IV, &newIV);
+                break;
+            case 6: // speed
+                SetMonData(&gPlayerParty[tMonId], MON_DATA_SPEED_IV, &newIV);
+                break;
+        }
+        CalculateMonStats(&gPlayerParty[tMonId]);
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+        gTasks[taskId].func = Task_ClosePartyMenu;
+        break;
+    }
+}
+
+void ItemUseCB_BottleCap(u8 taskId, TaskFunc task)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    gTasks[taskId].func = Task_BottleCap;
+}
+
+#undef tState
+#undef tMonId
 #undef tOldFunc
 
 static void Task_DisplayHPRestoredMessage(u8 taskId)

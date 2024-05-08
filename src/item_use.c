@@ -833,6 +833,12 @@ void ItemUseOutOfBattle_Mint(u8 taskId)
     SetUpItemUseCallback(taskId);
 }
 
+void ItemUseOutOfBattle_BottleCap(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_BottleCap;
+    SetUpItemUseCallback(taskId);
+}
+
 void ItemUseOutOfBattle_ReduceEV(u8 taskId)
 {
     gItemUseCB = ItemUseCB_ReduceEV;

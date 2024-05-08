@@ -171,7 +171,7 @@
 #define ITEM_MAX_MUSHROOMS 132
 
 // Treasures
-#define ITEM_BOTTLE_CAP 133
+#define ITEM_HEALTH_BOTTLE_CAP 133
 #define ITEM_GOLD_BOTTLE_CAP 134
 #define ITEM_NUGGET 135
 #define ITEM_BIG_NUGGET 136
@@ -926,7 +926,13 @@
 
 #define ITEM_FORM_CHANGER 806
 
-#define ITEMS_COUNT 807
+#define ITEM_MUSCLE_BOTTLE_CAP 807
+#define ITEM_RESIST_BOTTLE_CAP 808
+#define ITEM_GENIUS_BOTTLE_CAP 809
+#define ITEM_CLEVER_BOTTLE_CAP 810
+#define ITEM_SWIFT_BOTTLE_CAP 811
+
+#define ITEMS_COUNT 812
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

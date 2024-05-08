@@ -147,7 +147,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_POKE_TOY] = {gItemIcon_PokeToy, gItemIconPalette_PokeToy},
     [ITEM_MAX_MUSHROOMS] = {gItemIcon_MaxMushrooms, gItemIconPalette_MaxMushrooms},
     // Treasures
-    [ITEM_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
+    [ITEM_HEALTH_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
     [ITEM_GOLD_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_GoldBottleCap},
     [ITEM_NUGGET] = {gItemIcon_Nugget, gItemIconPalette_Nugget},
     [ITEM_BIG_NUGGET] = {gItemIcon_BigNugget, gItemIconPalette_BigNugget},
@@ -855,6 +855,12 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_INFINITY_CANDY] = {gItemIcon_RareCandy, gItemIconPalette_GoldTeeth},
 
     [ITEM_FORM_CHANGER] = {gItemIcon_DowsingMachine, gItemIconPalette_DowsingMachine},
+
+    [ITEM_MUSCLE_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
+    [ITEM_RESIST_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
+    [ITEM_GENIUS_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
+    [ITEM_CLEVER_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
+    [ITEM_SWIFT_BOTTLE_CAP] = {gItemIcon_BottleCap, gItemIconPalette_BottleCap},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
