@@ -1312,12 +1312,7 @@ LittlerootTown_ProfessorBirchsLab_Text_GiveShinyCharm:
 	.string "This is the Shiny Charm.\p"
 	.string "Rumor has it that it will increase\n"
 	.string "the odds of finding rare-colored\n"
-	.string "POKéMON in the wild!\p"
-	.string "… … … … … …\p"
-	.string "My final gift is a rare POKéMON only\n"
-	.string "found in another region!\p"
-	.string "You can have any one of these\n"
-	.string "three POKéMON!$"
+	.string "POKéMON in the wild!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CanHaveAnyOneOfRarePokemon:
 	.string "PROF. BIRCH: These are rare POKéMON\n"
