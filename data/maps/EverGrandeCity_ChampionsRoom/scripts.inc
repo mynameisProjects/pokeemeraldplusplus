@@ -110,6 +110,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	msgbox EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex, MSGBOX_DEFAULT
 	call ProfBirch_EventScript_RatePokedex
 	msgbox EverGrandeCity_ChampionsRoom_Text_BirchCongratulations, MSGBOX_DEFAULT
+	giveitem ITEM_INFINITY_CANDY, 1
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
@@ -311,6 +312,9 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 	.string "PROF. BIRCH: Anyways,\n"
 	.string "congratulations!\p"
+	.string "I've been working on a\n"
+	.string "special tool that you might like.\p"
+	.string "Please, take it!\p"
 	.string "Now, go proudly into the final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
