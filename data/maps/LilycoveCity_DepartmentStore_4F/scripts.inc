@@ -57,6 +57,7 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_THIEF
 	.2byte ITEM_TM_STEEL_WING
 	.2byte ITEM_TM_OVERHEAT
+	.2byte ITEM_TM51
 	.2byte ITEM_NONE
 	release
 	end
