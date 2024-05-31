@@ -11,8 +11,6 @@ Std_ObtainItem::
 	return
 
 EventScript_TryAddItemToPCObtain::
-	checkitemtype VAR_0x8004 @ Don't add if it's a key item
-	goto_if_eq VAR_RESULT, POCKET_KEY_ITEMS, EventScript_TryAddItemToPCObtainContinue
 	addpcitem VAR_0x8004, VAR_0x8005
 	call_if_eq VAR_RESULT, FALSE, EventScript_TryAddItemToPCObtainContinue
 	setvar VAR_0x8007, 2  @ (0= full, 1= in pocket, 2=in PC) 
@@ -122,8 +120,6 @@ Std_FindItem::
 	return
 
 EventScript_CheckPCSpace::
-	checkitemtype VAR_0x8004 @ Don't add if it's a key item
-	goto_if_eq VAR_RESULT, POCKET_KEY_ITEMS, EventScript_CheckPCSpaceContinue
 	pyramid_inchallenge
 	copyvar VAR_0x8004, ITEMID  @ pyramid_inchallenge modifies VAR_0x8004
 	goto_if_eq VAR_RESULT, TRUE, EventScript_CheckPCSpaceContinue
@@ -186,8 +182,6 @@ EventScript_HiddenItemScript::
 	end
 
 EventScript_TryAddItemToPCHidden::
-	checkitemtype VAR_0x8005 @ Don't add if it's a key item
-	goto_if_eq VAR_RESULT, POCKET_KEY_ITEMS, EventScript_TryAddHiddenItemToPCContinue
 	addpcitem VAR_0x8005
 	call_if_eq VAR_RESULT, FALSE, EventScript_TryAddHiddenItemToPCContinue
 	setvar VAR_0x8007, 2  @ (0= full, 1= in pocket, 2=in PC) 

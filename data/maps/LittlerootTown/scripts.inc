@@ -913,6 +913,67 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	delay 30
 	return
 
+LittlerootTown_EventScript_TheFixerStart::
+	lock
+	msgbox LittlerootTown_Text_CallMeFixer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LittlerootTown_EventScript_TheFixerYes
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_TheFixerNo
+	release
+	end
+
+LittlerootTown_EventScript_TheFixerYes::
+	lock
+	msgbox LittlerootTown_Text_FixerStart, MSGBOX_DEFAULT
+	giveitem ITEM_SS_TICKET
+	setflag FLAG_RECEIVED_SS_TICKET
+	giveitem ITEM_EON_TICKET
+	setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
+	giveitem ITEM_AURORA_TICKET
+	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
+	giveitem ITEM_MYSTIC_TICKET
+	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+	giveitem ITEM_OLD_SEA_MAP
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	giveitem ITEM_SHINY_CHARM
+	giveitem ITEM_INFINITY_CANDY
+	msgbox LittlerootTown_Text_FixerComplete, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_TheFixerNo::
+	lock
+	msgbox LittlerootTown_Text_FixerDecline, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_Text_CallMeFixer:
+	.string "Well, howdy squirt!\p"
+	.string "People 'round here call me the\n"
+	.string "fixer. When things don't work right\l"
+	.string "They come to me and I fix 'em.\p"
+	.string "Does your GAME need fixin'?\p"
+	.string "THIS WILL UPDATE ALL KEY ITEM FLAGS\n"
+	.string "THAT MAY HAVE BEEN UNAVAILABLE IN\l"
+	.string "PREVIOUS VERSIONS. USE ONLY IF YOU\l"
+	.string "DID NOT RECEIVE A KEY ITEM WHEN YOU\l"
+	.string "SHOULD HAVE DUE TO MAX BAG SPACE.\p"
+	.string "IF YOU RECEIVE DUPLICATE ITEMS, YOU\n"
+	.string "CAN SELL EXCESS KEY ITEMS.\p"
+	.string "Do you wish to proceed?$"
+
+LittlerootTown_Text_FixerDecline:
+	.string "Well now, no worries youngin',\n"
+	.string "I'll just go about my business now.$"
+
+LittlerootTown_Text_FixerStart:
+	.string "Alrighty then! Let me get started...\p"
+	.string "...$"
+
+LittlerootTown_Text_FixerComplete:
+	.string "...\p"
+	.string "aaaand done! What was previously broken\n"
+	.string "has now been fixed! See ya around.$"
+
 LittlerootTown_Text_OurNewHomeLetsGoInside:
 	.string "MOM: {PLAYER}, we're here, honey!\p"
 	.string "It must be tiring riding with our things\n"
