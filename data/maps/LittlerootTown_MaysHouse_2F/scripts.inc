@@ -330,8 +330,6 @@ RivalsHouse_2F_EventScript_Rival::
 	end
 
 RivalsHouse_2F_EventScript_May::
-	goto_if_unset FLAG_SYS_NATIONAL_DEX, LittlerootTown_MaysHouse_2F_EventScript_Ret
-	goto_if_unset FLAG_CAUGHT_JIRACHI, LittlerootTown_MaysHouse_2F_EventScript_PlayJirachiEventToBattle
 	msgbox RivalsHouse_2F_Text_MayGettingReady, MSGBOX_DEFAULT
 	releaseall
 	end
@@ -352,6 +350,8 @@ RivalsHouse_2F_EventScript_RivalPostLilycove::
 	end
 
 RivalsHouse_2F_EventScript_MayPostLilycove::
+	goto_if_unset FLAG_SYS_NATIONAL_DEX, RivalsHouse_2F_EventScript_MayWhereShouldIGoNext
+	goto_if_unset FLAG_CAUGHT_JIRACHI, LittlerootTown_MaysHouse_2F_EventScript_PlayJirachiEventToBattle
 	goto_if_set FLAG_MET_RIVAL_IN_HOUSE_AFTER_LILYCOVE, RivalsHouse_2F_EventScript_MayWhereShouldIGoNext
 	msgbox RivalsHouse_2F_Text_MayJustCheckingMyPokedex, MSGBOX_DEFAULT
 	return
