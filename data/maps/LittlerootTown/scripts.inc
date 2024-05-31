@@ -958,7 +958,8 @@ LittlerootTown_Text_CallMeFixer:
 	.string "DID NOT RECEIVE A KEY ITEM WHEN YOU\l"
 	.string "SHOULD HAVE DUE TO MAX BAG SPACE.\p"
 	.string "IF YOU RECEIVE DUPLICATE ITEMS, YOU\n"
-	.string "CAN SELL EXCESS KEY ITEMS.$"
+	.string "CAN SELL EXCESS KEY ITEMS.\p"
+	.string "Do you wish to proceed?$"
 
 LittlerootTown_Text_FixerDecline:
 	.string "Well now, no worries youngin',\n"
