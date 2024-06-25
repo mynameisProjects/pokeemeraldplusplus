@@ -58,6 +58,8 @@ LilycoveCity_DepartmentStore_6F_Pokemart2:
 	.2byte ITEM_MAGMARIZER
 	.2byte ITEM_DUBIOUS_DISC
 	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_PRISM_SCALE
 	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_SACHET
